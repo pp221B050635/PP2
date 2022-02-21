@@ -19,14 +19,23 @@ def my_check(string):
 
 cnt=0
 n=int(input())
+new=[]
+new1=[]
 passwords=[]
 for i in range(n):
     x=str(input())
     passwords.append(x)
 for i in range(n):
     if  my_check(passwords[i])==True:
-        cnt+=1 
+        new.append(passwords[i])
+
+new=set(new)
+for x in new:
+    if x not in new1:
+        new1.append(x)
+new1.sort
+cnt=len(new1)
 print(cnt)
-for i in range(n):
-    if  my_check(passwords[i])==True:
-        print(passwords[i], end='\n')
+for x in new1:
+    print(x,'\n')
+
