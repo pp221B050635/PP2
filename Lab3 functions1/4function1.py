@@ -1,19 +1,20 @@
-def isprime(n):
-    for i in range(2,int(n**0.5)+1):
-        if n%i==0:
-            return False
-        
-    return True
+def isprime(k):
+    if(k==2 or k==3):
+        return k
+    elif(k%2!=0 and k%3!=0):
+        return k
+   
 
-def filter_prime(list1):
-    primes=[]
-    for i in list1:
-        primes=list(lambda i : isprime(i)==True)
-        print(primes)
+numbers=str(input())
+list=[]
+newlist=[]
+numbers=numbers.split()
+for i in range(len(numbers)):
+    k=int(numbers[i])
+    t=isprime(k)
+    if(t!=None):
+        list.append(t)
 
-n=int(input())
-arr=[]
-for i in range(n):
-    x=int(input())
-    arr.append(x)
-print(filter_prime(arr))
+print(" Prime numbers:", end="")
+for x in list:
+    print(x, end=" ")
