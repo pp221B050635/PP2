@@ -1,11 +1,9 @@
 from math import tan, pi
+print('Input number of sides:',end='')
 sides=int(input())
-lenght=int(input())
-def area(sides,lenght):
-    e=tan(180/4)
-    print(e)
-    d=lenght/(2*tan(180/sides))
-    print(d)
-    return (sides*lenght*d)/2
-
-print(area(sides, lenght))
+print('Input the length of a side:',end='')
+lenth=int(input())
+apothem=((lenth)/(2*(tan(pi/sides))))
+area=(sides*apothem*lenth)/2
+print('Area=',end='')
+print(area)
